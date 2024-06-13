@@ -1,7 +1,7 @@
 from scipy.spatial import distance
 
 def distance_selection(selected_distance, list1, list2):
-    dist = None  # Initialisation de la variable dist
+    # Vérifie le type de distance sélectionné et calcule la distance appropriée
     if selected_distance == "Euclidean":
         dist = distance.euclidean(list1, list2)
     elif selected_distance == "Canberra":
@@ -12,4 +12,5 @@ def distance_selection(selected_distance, list1, list2):
         dist = distance.chebyshev(list1, list2)
     elif selected_distance == "Minkowsky":
         dist = distance.minkowski(list1, list2)
+    # Retourne la distance calculée
     return dist
